@@ -104,12 +104,12 @@ Precision	1.0000
 Recall	0.7857
 F1-Score	0.8800
 
- Interpretation:
+Interpretation:
 High precision (1.0) = No false positives
 Good recall (0.79) = Most frauds caught
 Balanced F1-score (0.88) = Production-ready performance
 
- STEP 8: Key Insights & Logic
+STEP 8: Key Insights & Logic
  Top Fraud Indicators:
 Feature	Insight
 Only TRANSFER and CASH_OUT used in fraud
@@ -117,7 +117,7 @@ amount	Fraud transactions often have high values
 newbalanceOrig	98% of frauds left sender's balance = 0
 oldbalanceOrg	Fraud starts with non-zero sender balance
 
- Feature Importance (Random Forest):
+Feature Importance (Random Forest):
 Feature	Importance
 oldbalanceOrg	29.4%
 newbalanceOrig	19.5%
@@ -125,14 +125,14 @@ amount	16.6%
 type_TRANSFER	8.6%
 step	7.1%
 
- STEP 9: Preventive Measures
+STEP 9: Preventive Measures
  Block instant transfers > ₹50,000
  Flag accounts with newbalanceOrig = 0
  Watch for transfers to accounts with newbalanceDest = 0
  Rate-limit users sending multiple transactions in minutes
  Assign fraud risk scores to destination accounts
 
-TEP 10: Monitoring Strategy
+STEP 10: Monitoring Strategy
 Metric	How Often	Why
 Recall	Weekly	Catch model degradation
 Positives	Weekly	Avoid customer frustration
@@ -142,9 +142,7 @@ Model Retraining	Quarterly	Handle fraud pattern shifts
 Use dashboards to track recall and alert thresholds.
 
 Resume Bullet
-vbnet
-Copy
-Edit
+
 Built a fraud detection model using Random Forest with 99.97% accuracy and 0.88 F1-score; handled 6.3M+ transactions, applied SMOTE to balance rare frauds, and identified key risk patterns for prevention.
 How to Run
 # Install dependencies
